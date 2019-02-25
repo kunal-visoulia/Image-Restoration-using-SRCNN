@@ -5,7 +5,7 @@ This network was published in the paper, "Image Super-Resolution Using Deep Conv
 **Referenced Research Paper** https://arxiv.org/abs/1501.00092.
 
 ### Dataset of Images
-uUsing the same images that were used in the original SRCNN paper. We can download these images from http://mmlab.ie.cuhk.edu.hk/projects/SRCNN.html (matlab code - set5 and set14 images as source).
+uUsing the same images that were used in the original SRCNN paper. We can download these images from http://mmlab.ie.cuhk.edu.hk/projects/SRCNN.html (matlab code - set5 and set14 images into "images folder").
 
 ## SRCNN
 The SRCNN is a deep convolutional neural network that learns end-to-end mapping of low resolution to high resolution images. As a result, we can use it to improve the image quality of low resolution images.
@@ -21,7 +21,7 @@ We will also be using OpenCV to pre and post process our images. Also, there is 
 >The proposed Super-Resolution Convolutional Neural Network (SRCNN) surpasses the bicubic baseline with just a few training iterations, and outperforms the sparse-coding-based method (SC) with moderate training. The performance may be further improved with more training iterations.
 
 ### Methodology
-1. pPrepare degraded images by introducing quality distortions by resizing up and down: new image(degraded) are of same resolution as base images.When sizing down the image we store the original pixel info in smaller area so we lost that info when sizing up the image. This was done using OpenCV(cv2 library), it is incredibly fast as it is designed for real time computer vision application.
+1. Prepare degraded images by introducing quality distortions by resizing up and down: new image(degraded) are of same resolution as base images.When sizing down the image we store the original pixel info in smaller area so we lost that info when sizing up the image. This was done using OpenCV(cv2 library), it is incredibly fast as it is designed for real time computer vision application. The degraded images are put into source folder.
 2. Building the SRCNN Model:<br/>
 ```
 # define model type
